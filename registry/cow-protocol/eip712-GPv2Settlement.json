@@ -17,7 +17,7 @@
     "formats": {
       "Order(address sellToken,address buyToken,address receiver,uint256 sellAmount,uint256 buyAmount,uint32 validTo,bytes32 appData,uint256 feeAmount,string kind,bool partiallyFillable,string sellTokenBalance,string buyTokenBalance)": {
         "intent": "Swap order",
-        "interpolatedIntent": "Swap at most {sellAmount} for at least {buyAmount} if fully filled, to {receiver}, until {validTo}",
+        "interpolatedIntent": "Swap at most {sellAmount} plus a fee of at most {feeAmount} for at least {buyAmount} if fully filled, to {receiver}, until {validTo}",
         "fields": [
           { "path": "sellAmount", "label": "Max to sell", "format": "tokenAmount", "params": { "tokenPath": "sellToken" } },
           {
@@ -26,13 +26,7 @@
             "format": "tokenAmount",
             "params": { "tokenPath": "buyToken", "nativeCurrencyAddress": ["0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"] }
           },
-          {
-            "path": "feeAmount",
-            "label": "Max fee on top",
-            "format": "tokenAmount",
-            "params": { "tokenPath": "sellToken" },
-            "visible": { "ifNotIn": [0, "0"] }
-          },
+          { "path": "feeAmount", "label": "Max fee on top", "format": "tokenAmount", "params": { "tokenPath": "sellToken" } },
           {
             "path": "receiver",
             "label": "Recipient",
