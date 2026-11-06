@@ -1,0 +1,413 @@
+{
+  "$schema": "../../../specs/erc7730-tests-v2.schema.json",
+  "descriptor": "../calldata-Robinhood_SpokePool.json",
+  "dataProvider": {
+    "tokens": {
+      "0x0bd7d308f8e1639fab988df18a8011f41eacad73": {
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": {
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      "0x4200000000000000000000000000000000000006": {
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18
+      }
+    }
+  },
+  "tests": [
+    {
+      "description": "deposit WETH to Ethereum Mainnet - chain 4663",
+      "rawTx": "0x02f901cf82123701830f4240843b9aca0083030d4094d29c85f15df544ba632c9e25829fd29d767d797880b901a4ad5425c6000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa960450000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000022b1c8c1227a0000000000000000000000000000000000000000000000000000228e41ceb2b9000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006ae664e0000000000000000000000000000000000000000000000000000000006ae68100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001800000000000000000000000000000000000000000000000000000000000000000c0",
+      "from": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+      "expected": {
+        "intent": "Bridge tokens",
+        "interpolatedIntent": "Bridge 2.5 WETH to 0x000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045 on the destination chain; the relayer must send 2.49 WETH; depositor 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        "owner": "Across Protocol",
+        "fields": [
+          {
+            "label": "Amount to Bridge",
+            "value": "2.5 WETH"
+          },
+          {
+            "label": "Native Value Sent",
+            "value": "0 ETH"
+          },
+          {
+            "label": "Destination Chain",
+            "value": "Ethereum Mainnet"
+          },
+          {
+            "label": "Recipient",
+            "value": "0x000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045"
+          },
+          {
+            "label": "Relayer Must Send",
+            "value": "2.49 WETH"
+          },
+          {
+            "label": "Output Token (dest.)",
+            "value": "WETH"
+          },
+          {
+            "label": "Depositor (gets refund, can change recipient and amount)",
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          },
+          {
+            "label": "Fill Deadline",
+            "value": "2026-11-01 00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "description": "deposit ETH to Ethereum Mainnet - chain 4663",
+      "rawTx": "0x02f901d682123701830f4240843b9aca0083030d4094d29c85f15df544ba632c9e25829fd29d767d797887b1a2bc2ec50000b901a4ad5425c6000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa960450000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000000b1a2bc2ec5000000000000000000000000000000000000000000000000000000ae153d89fe800000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006ae664e0000000000000000000000000000000000000000000000000000000006ae68100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001800000000000000000000000000000000000000000000000000000000000000000c0",
+      "from": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+      "expected": {
+        "intent": "Bridge tokens",
+        "interpolatedIntent": "Bridge 0.05 WETH to 0x000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045 on the destination chain; the relayer must send 0.049 WETH; depositor 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        "owner": "Across Protocol",
+        "fields": [
+          {
+            "label": "Amount to Bridge",
+            "value": "0.05 WETH"
+          },
+          {
+            "label": "Native Value Sent",
+            "value": "0.05 ETH"
+          },
+          {
+            "label": "Destination Chain",
+            "value": "Ethereum Mainnet"
+          },
+          {
+            "label": "Recipient",
+            "value": "0x000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045"
+          },
+          {
+            "label": "Relayer Must Send",
+            "value": "0.049 WETH"
+          },
+          {
+            "label": "Output Token (dest.)",
+            "value": "WETH"
+          },
+          {
+            "label": "Depositor (gets refund, can change recipient and amount)",
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          },
+          {
+            "label": "Fill Deadline",
+            "value": "2026-11-01 00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "description": "depositNow WETH to Unichain - chain 4663",
+      "rawTx": "0x02f901af82123701830f4240843b9aca0083030d4094d29c85f15df544ba632c9e25829fd29d767d797880b90184ea86bd4600000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af1100000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af110000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad730000000000000000000000004200000000000000000000000000000000000006000000000000000000000000000000000000000000000000002386f26fc1000000000000000000000000000000000000000000000000000000232bff5f46c000000000000000000000000000000000000000000000000000000000000000008200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001600000000000000000000000000000000000000000000000000000000000000000c0",
+      "from": "0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11",
+      "expected": {
+        "intent": "Bridge tokens",
+        "interpolatedIntent": "Bridge 0.01 WETH to 0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11 on the destination chain; the relayer must send 0.0099 WETH; depositor 0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11",
+        "owner": "Across Protocol",
+        "fields": [
+          {
+            "label": "Amount to Bridge",
+            "value": "0.01 WETH"
+          },
+          {
+            "label": "Native Value Sent",
+            "value": "0 ETH"
+          },
+          {
+            "label": "Destination Chain",
+            "value": "Unichain"
+          },
+          {
+            "label": "Recipient",
+            "value": "0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11"
+          },
+          {
+            "label": "Relayer Must Send",
+            "value": "0.0099 WETH"
+          },
+          {
+            "label": "Output Token (dest.)",
+            "value": "WETH"
+          },
+          {
+            "label": "Depositor (gets refund, can change recipient and amount)",
+            "value": "0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11"
+          },
+          {
+            "label": "Fill Window",
+            "value": "05:00:00"
+          }
+        ]
+      }
+    },
+    {
+      "description": "depositV3 WETH to Ethereum Mainnet - chain 4663",
+      "rawTx": "0x02f901cf82123701830f4240843b9aca0083030d4094d29c85f15df544ba632c9e25829fd29d767d797880b901a47b939232000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa960450000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000dbd2fc137a3000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006ae664e0000000000000000000000000000000000000000000000000000000006ae68100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001800000000000000000000000000000000000000000000000000000000000000000c0",
+      "from": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+      "expected": {
+        "intent": "Bridge tokens",
+        "interpolatedIntent": "Bridge 1 WETH to 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 on the destination chain; the relayer must send 0.99 WETH; depositor 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        "owner": "Across Protocol",
+        "fields": [
+          {
+            "label": "Amount to Bridge",
+            "value": "1 WETH"
+          },
+          {
+            "label": "Native Value Sent",
+            "value": "0 ETH"
+          },
+          {
+            "label": "Destination Chain",
+            "value": "Ethereum Mainnet"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          },
+          {
+            "label": "Relayer Must Send",
+            "value": "0.99 WETH"
+          },
+          {
+            "label": "Output Token (dest.)",
+            "value": "WETH"
+          },
+          {
+            "label": "Depositor (gets refund, can change recipient and amount)",
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          },
+          {
+            "label": "Fill Deadline",
+            "value": "2026-11-01 00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "description": "depositV3Now ETH to Ethereum Mainnet - chain 4663",
+      "rawTx": "0x02f901b682123701830f4240843b9aca0083030d4094d29c85f15df544ba632c9e25829fd29d767d7978872386f26fc10000b901847aef642c000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa960450000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000000000000000000000000000002386f26fc1000000000000000000000000000000000000000000000000000000232bff5f46c000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001600000000000000000000000000000000000000000000000000000000000000000c0",
+      "from": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+      "expected": {
+        "intent": "Bridge tokens",
+        "interpolatedIntent": "Bridge 0.01 WETH to 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 on the destination chain; the relayer must send 0.0099 WETH; depositor 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        "owner": "Across Protocol",
+        "fields": [
+          {
+            "label": "Amount to Bridge",
+            "value": "0.01 WETH"
+          },
+          {
+            "label": "Native Value Sent",
+            "value": "0.01 ETH"
+          },
+          {
+            "label": "Destination Chain",
+            "value": "Ethereum Mainnet"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          },
+          {
+            "label": "Relayer Must Send",
+            "value": "0.0099 WETH"
+          },
+          {
+            "label": "Output Token (dest.)",
+            "value": "WETH"
+          },
+          {
+            "label": "Depositor (gets refund, can change recipient and amount)",
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          },
+          {
+            "label": "Fill Window",
+            "value": "05:00:00"
+          }
+        ]
+      }
+    },
+    {
+      "description": "unsafeDeposit WETH to Ethereum Mainnet - chain 4663",
+      "rawTx": "0x02f901ef82123701830f4240843b9aca0083030d4094d29c85f15df544ba632c9e25829fd29d767d797880b901c48b15788e00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af1100000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af110000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000011c37937e080000000000000000000000000000000000000000000000000000011ba60e96de000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007000000000000000000000000000000000000000000000000000000006ae664e0000000000000000000000000000000000000000000000000000000006ae68100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a00000000000000000000000000000000000000000000000000000000000000000c0",
+      "from": "0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11",
+      "expected": {
+        "intent": "Bridge tokens with a chosen deposit nonce",
+        "interpolatedIntent": "Bridge 0.005 WETH to 0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11 on the destination chain; the relayer must send 0.00499 WETH; depositor 0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11; deposit nonce 7",
+        "owner": "Across Protocol",
+        "fields": [
+          {
+            "label": "Amount to Bridge",
+            "value": "0.005 WETH"
+          },
+          {
+            "label": "Native Value Sent",
+            "value": "0 ETH"
+          },
+          {
+            "label": "Destination Chain",
+            "value": "Ethereum Mainnet"
+          },
+          {
+            "label": "Recipient",
+            "value": "0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11"
+          },
+          {
+            "label": "Relayer Must Send",
+            "value": "0.00499 WETH"
+          },
+          {
+            "label": "Output Token (dest.)",
+            "value": "WETH"
+          },
+          {
+            "label": "Depositor (gets refund, can change recipient and amount)",
+            "value": "0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11"
+          },
+          {
+            "label": "Fill Deadline",
+            "value": "2026-11-01 00:00:00Z"
+          },
+          {
+            "label": "Deposit Nonce",
+            "value": "7"
+          }
+        ]
+      }
+    },
+    {
+      "description": "speedUpDeposit - chain 4663",
+      "rawTx": "0x02f9014f82123701830f4240843b9aca0083030d4094d29c85f15df544ba632c9e25829fd29d767d797880b90124babb6aac000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa9604500000000000000000000000000000000000000000000000000000000003d9a8f000000000000000000000000000000000000000000000000043b93e2507e800000000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af1100000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000021234000000000000000000000000000000000000000000000000000000000000c0",
+      "from": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+      "expected": {
+        "intent": "Request bridge deposit update",
+        "interpolatedIntent": "Request update of deposit 4037263 of 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045: 305000000000000000 raw units to 0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11",
+        "owner": "Across Protocol",
+        "fields": [
+          {
+            "label": "Deposit ID",
+            "value": "4037263"
+          },
+          {
+            "label": "New Output (raw)",
+            "value": "305000000000000000"
+          },
+          {
+            "label": "New Recipient",
+            "value": "0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11"
+          },
+          {
+            "label": "Depositor",
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          }
+        ]
+      }
+    },
+    {
+      "description": "speedUpV3Deposit - chain 4663",
+      "rawTx": "0x02f9014f82123701830f4240843b9aca0083030d4094d29c85f15df544ba632c9e25829fd29d767d797880b90124577f51f8000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa9604500000000000000000000000000000000000000000000000000000000003d9a8f000000000000000000000000000000000000000000000000043b93e2507e800000000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af1100000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000021234000000000000000000000000000000000000000000000000000000000000c0",
+      "from": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+      "expected": {
+        "intent": "Request bridge deposit update",
+        "interpolatedIntent": "Request update of deposit 4037263 of 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045: 305000000000000000 raw units to 0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11",
+        "owner": "Across Protocol",
+        "fields": [
+          {
+            "label": "Deposit ID",
+            "value": "4037263"
+          },
+          {
+            "label": "New Output (raw)",
+            "value": "305000000000000000"
+          },
+          {
+            "label": "New Recipient",
+            "value": "0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11"
+          },
+          {
+            "label": "Depositor",
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          }
+        ]
+      }
+    },
+    {
+      "description": "multicall, one depositV3 - chain 4663",
+      "rawTx": "0x02f9026f82123701830f4240843b9aca0083030d4094d29c85f15df544ba632c9e25829fd29d767d797880b90244ac9650d800000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001a47b939232000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa960450000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000dbd2fc137a3000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006ae664e0000000000000000000000000000000000000000000000000000000006ae6810000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0",
+      "from": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+      "expected": {
+        "intent": "Batch SpokePool actions",
+        "interpolatedIntent": "Run every action below in one transaction; if one action fails, the whole transaction reverts",
+        "owner": "Across Protocol",
+        "fields": [
+          {
+            "label": "Action",
+            "value": {
+              "intent": "Bridge tokens",
+              "interpolatedIntent": "Bridge 1 WETH to 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 on the destination chain; the relayer must send 0.99 WETH; depositor 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+              "owner": "Across Protocol",
+              "fields": [
+                {
+                  "label": "Amount to Bridge",
+                  "value": "1 WETH"
+                },
+                {
+                  "label": "Native Value Sent",
+                  "value": "0 ETH"
+                },
+                {
+                  "label": "Destination Chain",
+                  "value": "Ethereum Mainnet"
+                },
+                {
+                  "label": "Recipient",
+                  "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+                },
+                {
+                  "label": "Relayer Must Send",
+                  "value": "0.99 WETH"
+                },
+                {
+                  "label": "Output Token (dest.)",
+                  "value": "WETH"
+                },
+                {
+                  "label": "Depositor (gets refund, can change recipient and amount)",
+                  "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+                },
+                {
+                  "label": "Fill Deadline",
+                  "value": "2026-11-01 00:00:00Z"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "description": "tryMulticall, empty batch - chain 4663",
+      "rawTx": "0x02f86e82123701830f4240843b9aca0083030d4094d29c85f15df544ba632c9e25829fd29d767d797880b844437b911600000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000c0",
+      "expected": {
+        "intent": "Batch, skip failed actions",
+        "interpolatedIntent": "Run every action below in one transaction; an action that fails is skipped and the others still run",
+        "owner": "Across Protocol",
+        "fields": []
+      }
+    }
+  ]
+}
