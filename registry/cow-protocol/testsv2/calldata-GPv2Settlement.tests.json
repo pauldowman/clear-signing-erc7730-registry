@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../specs/erc7730-tests-v2.schema.json",
+  "descriptor": "../calldata-GPv2Settlement.json",
+  "tests": [
+    {
+      "description": "Sepolia: pre-sign the Safe order of the spike (0x0ac40aa3)",
+      "rawTx": "0x02f8cf83aa36a701830f4240843b9aca0083030d40949008d19f58aabd9ed0d60971565aa8510560ab4180b8a4ec6cb13f0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000380ac40aa3870cb15f0d70be831d4ee55416566ba7b563e6538931712880e761281ef4307a36caf9370dea5e26c13e0363a00614486ade681a0000000000000000c0",
+      "expected": {
+        "intent": "Authorize or revoke order",
+        "owner": "CoW Protocol",
+        "fields": [
+          {
+            "label": "Order ID",
+            "value": "0x0ac40aa3870cb15f0d70be831d4ee55416566ba7b563e6538931712880e761281ef4307a36caf9370dea5e26c13e0363a00614486ade681a"
+          },
+          {
+            "label": "Authorized",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Base: revoke an order pre-signature",
+      "rawTx": "0x02f8ce82210501830f4240843b9aca0083030d40949008d19f58aabd9ed0d60971565aa8510560ab4180b8a4ec6cb13f0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000380ac40aa3870cb15f0d70be831d4ee55416566ba7b563e6538931712880e761281ef4307a36caf9370dea5e26c13e0363a00614486ade681a0000000000000000c0",
+      "expected": {
+        "intent": "Authorize or revoke order",
+        "owner": "CoW Protocol",
+        "fields": [
+          {
+            "label": "Order ID",
+            "value": "0x0ac40aa3870cb15f0d70be831d4ee55416566ba7b563e6538931712880e761281ef4307a36caf9370dea5e26c13e0363a00614486ade681a"
+          },
+          {
+            "label": "Authorized",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Arbitrum: cancel an order on-chain",
+      "rawTx": "0x02f8ae82a4b101830f4240843b9aca0083030d40949008d19f58aabd9ed0d60971565aa8510560ab4180b88415337bc000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000038b9181fbece7349429e6dee6dc15229ecc8da3ed648e829783443471be48ba9d9ac0bec2aa93c8b06d53d4cff70c77a21d0749be56add1d1b0000000000000000c0",
+      "expected": {
+        "intent": "Cancel order",
+        "owner": "CoW Protocol",
+        "fields": [
+          {
+            "label": "Order ID",
+            "value": "0xb9181fbece7349429e6dee6dc15229ecc8da3ed648e829783443471be48ba9d9ac0bec2aa93c8b06d53d4cff70c77a21d0749be56add1d1b"
+          }
+        ]
+      }
+    }
+  ]
+}
