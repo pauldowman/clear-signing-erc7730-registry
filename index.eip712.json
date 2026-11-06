@@ -805,6 +805,24 @@
       }
     ]
   },
+  "eip155:10:0x9008d19f58aabd9ed0d60971565aa8510560ab41": {
+    "Order": [
+      {
+        "path": "registry/cow-protocol/eip712-GPv2Settlement.json",
+        "encodeTypeHashes": [
+          "0xd5a25ba2e97094ad7d83dc28a6572da797d6b3e7fc6663bd93efb789fc17e489"
+        ]
+      }
+    ],
+    "OrderCancellations": [
+      {
+        "path": "registry/cow-protocol/eip712-GPv2Settlement.json",
+        "encodeTypeHashes": [
+          "0x4c89efb91ae246f78d2fe68b47db2fa1444a121a4f2dc3fda7a5a408c2e3588e"
+        ]
+      }
+    ]
+  },
   "eip155:10:0x9560e827af36c94d2ac33a39bce1fe78631088db": {
     "Permit": [
       {
@@ -1585,6 +1603,24 @@
         "path": "registry/lombard/eip712-network-fee-authorization-sepolia.json",
         "encodeTypeHashes": [
           "0x40ac9f6aa27075e64c1ed1ea2e831b20b8c25efdeb6b79fd0cf683c9a9c50725"
+        ]
+      }
+    ]
+  },
+  "eip155:11155111:0x9008d19f58aabd9ed0d60971565aa8510560ab41": {
+    "Order": [
+      {
+        "path": "registry/cow-protocol/eip712-GPv2Settlement.json",
+        "encodeTypeHashes": [
+          "0xd5a25ba2e97094ad7d83dc28a6572da797d6b3e7fc6663bd93efb789fc17e489"
+        ]
+      }
+    ],
+    "OrderCancellations": [
+      {
+        "path": "registry/cow-protocol/eip712-GPv2Settlement.json",
+        "encodeTypeHashes": [
+          "0x4c89efb91ae246f78d2fe68b47db2fa1444a121a4f2dc3fda7a5a408c2e3588e"
         ]
       }
     ]
@@ -5915,6 +5951,24 @@
       }
     ]
   },
+  "eip155:1:0x9008d19f58aabd9ed0d60971565aa8510560ab41": {
+    "Order": [
+      {
+        "path": "registry/cow-protocol/eip712-GPv2Settlement.json",
+        "encodeTypeHashes": [
+          "0xd5a25ba2e97094ad7d83dc28a6572da797d6b3e7fc6663bd93efb789fc17e489"
+        ]
+      }
+    ],
+    "OrderCancellations": [
+      {
+        "path": "registry/cow-protocol/eip712-GPv2Settlement.json",
+        "encodeTypeHashes": [
+          "0x4c89efb91ae246f78d2fe68b47db2fa1444a121a4f2dc3fda7a5a408c2e3588e"
+        ]
+      }
+    ]
+  },
   "eip155:1:0x9757f2d2b135150bbeb65308d4a91804107cd8d6": {
     "Order": [
       {
@@ -8703,6 +8757,24 @@
         "path": "registry/HyperDiscipline/eip712-CommitIntent.json",
         "encodeTypeHashes": [
           "0x3f532b01e168acd0bddb941af7d5b5f68499298e5aa5294dcb722b34391d53c9"
+        ]
+      }
+    ]
+  },
+  "eip155:42161:0x9008d19f58aabd9ed0d60971565aa8510560ab41": {
+    "Order": [
+      {
+        "path": "registry/cow-protocol/eip712-GPv2Settlement.json",
+        "encodeTypeHashes": [
+          "0xd5a25ba2e97094ad7d83dc28a6572da797d6b3e7fc6663bd93efb789fc17e489"
+        ]
+      }
+    ],
+    "OrderCancellations": [
+      {
+        "path": "registry/cow-protocol/eip712-GPv2Settlement.json",
+        "encodeTypeHashes": [
+          "0x4c89efb91ae246f78d2fe68b47db2fa1444a121a4f2dc3fda7a5a408c2e3588e"
         ]
       }
     ]
@@ -14147,6 +14219,24 @@
         "path": "registry/zkstables/eip712-zkemt.json",
         "encodeTypeHashes": [
           "0x7c7c6cdb67a18743f49ec6fa9b35f50d52ed05cbed4cc592e13b44501c1a2267"
+        ]
+      }
+    ]
+  },
+  "eip155:8453:0x9008d19f58aabd9ed0d60971565aa8510560ab41": {
+    "Order": [
+      {
+        "path": "registry/cow-protocol/eip712-GPv2Settlement.json",
+        "encodeTypeHashes": [
+          "0xd5a25ba2e97094ad7d83dc28a6572da797d6b3e7fc6663bd93efb789fc17e489"
+        ]
+      }
+    ],
+    "OrderCancellations": [
+      {
+        "path": "registry/cow-protocol/eip712-GPv2Settlement.json",
+        "encodeTypeHashes": [
+          "0x4c89efb91ae246f78d2fe68b47db2fa1444a121a4f2dc3fda7a5a408c2e3588e"
         ]
       }
     ]
