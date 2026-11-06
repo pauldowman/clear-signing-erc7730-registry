@@ -1,0 +1,79 @@
+{
+  "$schema": "../../../specs/erc7730-tests-v2.schema.json",
+  "descriptor": "../calldata-weth-robinhood.json",
+  "dataProvider": {
+    "tokens": {
+      "0x0bd7d308f8e1639fab988df18a8011f41eacad73": {
+        "symbol": "WETH",
+        "decimals": 18,
+        "name": "Wrapped Ether"
+      }
+    }
+  },
+  "tests": [
+    {
+      "description": "Wrap - chain 4663",
+      "rawTx": "0x02f482123701830f4240843b9aca0083030d40940bd7d308f8e1639fab988df18a8011f41eacad73872386f26fc1000084d0e30db0c0",
+      "expected": {
+        "intent": "Wrap",
+        "owner": "WETH",
+        "fields": [
+          {
+            "label": "Amount",
+            "value": "0.01 ETH"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Unwrap - chain 4663",
+      "rawTx": "0x02f84d82123701830f4240843b9aca0083030d40940bd7d308f8e1639fab988df18a8011f41eacad7380a42e1a7d4d000000000000000000000000000000000000000000000000002386f26fc10000c0",
+      "expected": {
+        "intent": "Unwrap",
+        "owner": "WETH",
+        "fields": [
+          {
+            "label": "Amount",
+            "value": "0.01 WETH"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Send - chain 4663",
+      "rawTx": "0x02f86e82123701830f4240843b9aca0083030d40940bd7d308f8e1639fab988df18a8011f41eacad7380b844a9059cbb000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa9604500000000000000000000000000000000000000000000000003782dace9d90000c0",
+      "expected": {
+        "intent": "Send",
+        "owner": "WETH",
+        "fields": [
+          {
+            "label": "Amount",
+            "value": "0.25 WETH"
+          },
+          {
+            "label": "To",
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Approve - chain 4663",
+      "rawTx": "0x02f86e82123701830f4240843b9aca0083030d40940bd7d308f8e1639fab988df18a8011f41eacad7380b844095ea7b3000000000000000000000000c92e8bdf79f0507f65a392b0ab4667716bfe011000000000000000000000000000000000000000000000000000038d7ea4c68000c0",
+      "expected": {
+        "intent": "Approve",
+        "owner": "WETH",
+        "fields": [
+          {
+            "label": "Spender",
+            "value": "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
+          },
+          {
+            "label": "Amount",
+            "value": "0.001 WETH"
+          }
+        ]
+      }
+    }
+  ]
+}

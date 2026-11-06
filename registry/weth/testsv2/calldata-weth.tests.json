@@ -1,7 +1,7 @@
 {
   "$schema": "../../../specs/erc7730-tests-v2.schema.json",
   "descriptor": "../calldata-weth.json",
-  "dataProvider": { "tokens": { "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": { "symbol": "WETH", "decimals": 18, "name": "Wrapped Ether" } } },
+  "dataProvider": { "tokens": { "0xfff9976782d46cc05630d1f6ebab18b2324d6b14": { "symbol": "WETH", "decimals": 18, "name": "Wrapped Ether" }, "0x4200000000000000000000000000000000000006": { "symbol": "WETH", "decimals": 18, "name": "Wrapped Ether" }, "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": { "symbol": "WETH", "decimals": 18, "name": "Wrapped Ether" } } },
   "tests": [
     {
       "description": "Wrap - chain 1",
@@ -14,6 +14,74 @@
       "rawTx": "0x02f84b012d8423ea7c748430de1c0a82d4a294c02aaa39b223fe8d0a0e5c4f27ead9083c756cc280a42e1a7d4d000000000000000000000000000000000000000000000000008f5b92dcf4b000c0",
       "txHash": "0xdfdce65121e70d930328ccd8dbf449832bd9a2afd528c97f4b395a99d21b6810",
       "expected": { "intent": "Unwrap", "owner": "WETH", "fields": [{ "label": "Amount", "value": "0.040351608 WETH" }] }
+    },
+    {
+      "description": "Approve - CoW VaultRelayer - chain 11155111",
+      "rawTx": "0x02f86f83aa36a701830f4240843b9aca0083030d4094fff9976782d46cc05630d1f6ebab18b2324d6b1480b844095ea7b3000000000000000000000000c92e8bdf79f0507f65a392b0ab4667716bfe011000000000000000000000000000000000000000000000000000038d7ea4c68000c0",
+      "expected": {
+        "intent": "Approve",
+        "owner": "WETH",
+        "fields": [
+          {
+            "label": "Spender",
+            "value": "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
+          },
+          {
+            "label": "Amount",
+            "value": "0.001 WETH"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Approve - unlimited - chain 8453",
+      "rawTx": "0x02f86e82210501830f4240843b9aca0083030d4094420000000000000000000000000000000000000680b844095ea7b3000000000000000000000000c92e8bdf79f0507f65a392b0ab4667716bfe0110ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc0",
+      "expected": {
+        "intent": "Approve",
+        "owner": "WETH",
+        "fields": [
+          {
+            "label": "Spender",
+            "value": "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
+          },
+          {
+            "label": "Amount",
+            "value": "Unlimited WETH"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Send - chain 10",
+      "rawTx": "0x02f86c0a01830f4240843b9aca0083030d4094420000000000000000000000000000000000000680b844a9059cbb000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa9604500000000000000000000000000000000000000000000000003782dace9d90000c0",
+      "expected": {
+        "intent": "Send",
+        "owner": "WETH",
+        "fields": [
+          {
+            "label": "Amount",
+            "value": "0.25 WETH"
+          },
+          {
+            "label": "To",
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Wrap - chain 84532",
+      "rawTx": "0x02f583014a3401830f4240843b9aca0083030d40944200000000000000000000000000000000000006872386f26fc1000084d0e30db0c0",
+      "expected": {
+        "intent": "Wrap",
+        "owner": "WETH",
+        "fields": [
+          {
+            "label": "Amount",
+            "value": "0.01 ETH"
+          }
+        ]
+      }
     }
   ]
 }
