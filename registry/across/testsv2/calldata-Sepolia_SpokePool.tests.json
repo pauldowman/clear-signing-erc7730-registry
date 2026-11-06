@@ -33,7 +33,7 @@
       "txHash": "0x63de0d14168d198ab4dc985f1055d6180793d50c9743dd585086c9a45026a99c",
       "expected": {
         "intent": "Bridge tokens",
-        "interpolatedIntent": "Bridge 1 USDC to 0x000000000000000000000000ac0bec2aa93c8b06d53d4cff70c77a21d0749be5 on the destination chain; the relayer must send 0.997416 USDC; depositor 0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5",
+        "interpolatedIntent": "Bridge 1 USDC to 0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5 on the destination chain; the relayer must send 0.997416 USDC; depositor 0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5",
         "owner": "Across Protocol",
         "fields": [
           {
@@ -50,7 +50,7 @@
           },
           {
             "label": "Recipient",
-            "value": "0x000000000000000000000000ac0bec2aa93c8b06d53d4cff70c77a21d0749be5"
+            "value": "0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5"
           },
           {
             "label": "Relayer Must Send",
@@ -77,7 +77,7 @@
       "from": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
       "expected": {
         "intent": "Bridge tokens",
-        "interpolatedIntent": "Bridge 250 USDC to 0x000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045 on the destination chain; the relayer must send 249 USDC; depositor 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        "interpolatedIntent": "Bridge 250 USDC to 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 on the destination chain; the relayer must send 249 USDC; depositor 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
         "owner": "Across Protocol",
         "fields": [
           {
@@ -94,7 +94,7 @@
           },
           {
             "label": "Recipient",
-            "value": "0x000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045"
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
           },
           {
             "label": "Relayer Must Send",
@@ -121,7 +121,7 @@
       "from": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
       "expected": {
         "intent": "Bridge tokens",
-        "interpolatedIntent": "Bridge 0.05 WETH to 0x000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045 on the destination chain; the relayer must send 0.049 WETH; depositor 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        "interpolatedIntent": "Bridge 0.05 WETH to 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 on the destination chain; the relayer must send 0.049 WETH; depositor 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
         "owner": "Across Protocol",
         "fields": [
           {
@@ -138,7 +138,7 @@
           },
           {
             "label": "Recipient",
-            "value": "0x000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa96045"
+            "value": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
           },
           {
             "label": "Relayer Must Send",
@@ -165,7 +165,7 @@
       "from": "0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11",
       "expected": {
         "intent": "Bridge tokens",
-        "interpolatedIntent": "Bridge 0.01 WETH to 0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11 on the destination chain; the relayer must send 0.0099 WETH; depositor 0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11",
+        "interpolatedIntent": "Bridge 0.01 WETH to 0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11 on the destination chain; the relayer must send 0.0099 WETH; depositor 0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11",
         "owner": "Across Protocol",
         "fields": [
           {
@@ -182,7 +182,7 @@
           },
           {
             "label": "Recipient",
-            "value": "0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11"
+            "value": "0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11"
           },
           {
             "label": "Relayer Must Send",
@@ -297,7 +297,7 @@
       "from": "0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11",
       "expected": {
         "intent": "Bridge tokens with a chosen deposit nonce",
-        "interpolatedIntent": "Bridge 0.005 WETH to 0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11 on the destination chain; the relayer must send 0.00499 WETH; depositor 0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11; deposit nonce 7",
+        "interpolatedIntent": "Bridge 0.005 WETH to 0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11 on the destination chain; the relayer must send 0.00499 WETH; depositor 0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11; deposit nonce 7",
         "owner": "Across Protocol",
         "fields": [
           {
@@ -314,7 +314,7 @@
           },
           {
             "label": "Recipient",
-            "value": "0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11"
+            "value": "0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11"
           },
           {
             "label": "Relayer Must Send",
@@ -389,7 +389,7 @@
       "from": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
       "expected": {
         "intent": "Request bridge deposit update",
-        "interpolatedIntent": "Request update of deposit 4037263 of 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045: 305000000000000000 raw units to 0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11",
+        "interpolatedIntent": "Request update of deposit 4037263 of 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045: 305000000000000000 raw units to 0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11",
         "owner": "Across Protocol",
         "fields": [
           {
@@ -402,7 +402,7 @@
           },
           {
             "label": "New Recipient",
-            "value": "0x00000000000000000000000007fa033371cde9b7ce587c135fd6acc575f1af11"
+            "value": "0x07fA033371CdE9b7cE587c135fd6Acc575F1aF11"
           },
           {
             "label": "Depositor",

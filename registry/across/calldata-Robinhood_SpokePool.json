@@ -64,7 +64,7 @@
             "params": { "$ref": "$.metadata.enums.destinationChainOverride" },
             "visible": { "ifNotIn": [1, 10, 56, 137, 324, 8453, 42161, 43114, 59144] }
           },
-          { "path": "recipient", "label": "Recipient", "format": "raw" },
+          { "path": "recipient", "label": "Recipient", "format": "addressName", "params": { "types": ["eoa"], "sources": ["local", "ens"] } },
           {
             "path": "outputAmount",
             "label": "Relayer Must Send",
@@ -130,7 +130,7 @@
             "params": { "$ref": "$.metadata.enums.destinationChainOverride" },
             "visible": { "ifNotIn": [1, 10, 56, 137, 324, 8453, 42161, 43114, 59144] }
           },
-          { "path": "recipient", "label": "Recipient", "format": "raw" },
+          { "path": "recipient", "label": "Recipient", "format": "addressName", "params": { "types": ["eoa"], "sources": ["local", "ens"] } },
           {
             "path": "outputAmount",
             "label": "Relayer Must Send",
@@ -194,7 +194,7 @@
             "path": "recipient",
             "label": "Recipient",
             "format": "addressName",
-            "params": { "types": ["eoa", "wallet", "contract"], "sources": ["local", "ens"] }
+            "params": { "types": ["eoa"], "sources": ["local", "ens"] }
           },
           {
             "path": "outputAmount",
@@ -260,7 +260,7 @@
             "path": "recipient",
             "label": "Recipient",
             "format": "addressName",
-            "params": { "types": ["eoa", "wallet", "contract"], "sources": ["local", "ens"] }
+            "params": { "types": ["eoa"], "sources": ["local", "ens"] }
           },
           {
             "path": "outputAmount",
@@ -298,7 +298,7 @@
         "fields": [
           { "path": "depositId", "label": "Deposit ID", "format": "raw" },
           { "path": "updatedOutputAmount", "label": "New Output (raw)", "format": "raw" },
-          { "path": "updatedRecipient", "label": "New Recipient", "format": "raw" },
+          { "path": "updatedRecipient", "label": "New Recipient", "format": "addressName", "params": { "types": ["eoa"], "sources": ["local", "ens"] } },
           {
             "path": "depositor",
             "label": "Depositor",
@@ -319,7 +319,7 @@
             "path": "updatedRecipient",
             "label": "New Recipient",
             "format": "addressName",
-            "params": { "types": ["eoa", "wallet", "contract"], "sources": ["local", "ens"] }
+            "params": { "types": ["eoa"], "sources": ["local", "ens"] }
           },
           {
             "path": "depositor",
@@ -375,7 +375,7 @@
             "params": { "$ref": "$.metadata.enums.destinationChainOverride" },
             "visible": { "ifNotIn": [1, 10, 56, 137, 324, 8453, 42161, 43114, 59144] }
           },
-          { "path": "recipient", "label": "Recipient", "format": "raw" },
+          { "path": "recipient", "label": "Recipient", "format": "addressName", "params": { "types": ["eoa"], "sources": ["local", "ens"] } },
           {
             "path": "outputAmount",
             "label": "Relayer Must Send",
