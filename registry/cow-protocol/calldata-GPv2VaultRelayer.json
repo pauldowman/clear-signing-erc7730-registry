@@ -1,0 +1,16 @@
+{
+  "$schema": "../../specs/erc7730-v2.schema.json",
+  "context": {
+    "contract": {
+      "deployments": [
+        { "chainId": 1, "address": "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110" },
+        { "chainId": 10, "address": "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110" },
+        { "chainId": 8453, "address": "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110" },
+        { "chainId": 42161, "address": "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110" },
+        { "chainId": 11155111, "address": "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110" }
+      ]
+    }
+  },
+  "metadata": { "owner": "CoW Protocol", "contractName": "GPv2VaultRelayer", "info": { "url": "https://cow.fi" } },
+  "display": { "formats": {} }
+}
