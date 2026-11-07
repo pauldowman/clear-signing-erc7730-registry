@@ -1,0 +1,14 @@
+{
+  "$schema": "../../specs/erc7730-v2.schema.json",
+  "context": {
+    "contract": {
+      "deployments": [
+        { "chainId": 10, "address": "0x420000000000000000000000000000000000001A" },
+        { "chainId": 8453, "address": "0x420000000000000000000000000000000000001A" },
+        { "chainId": 84532, "address": "0x420000000000000000000000000000000000001A" }
+      ]
+    }
+  },
+  "metadata": { "owner": "OP Stack", "contractName": "L1FeeVault", "info": { "url": "https://optimism.io" } },
+  "display": { "formats": {} }
+}
