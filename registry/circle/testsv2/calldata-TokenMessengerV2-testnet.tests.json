@@ -1,0 +1,52 @@
+{
+  "$schema": "../../../specs/erc7730-tests-v2.schema.json",
+  "descriptor": "../calldata-TokenMessengerV2-testnet.json",
+  "dataProvider": {
+    "tokens": {
+      "0x1c7d4b196cb0c7b01d743fbc6116a902379c7238": {
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    }
+  },
+  "tests": [
+    {
+      "description": "Burn 1 USDC on Sepolia to mint on Base Sepolia, fast (byob#37 spike tx 0x48de5ffc)",
+      "rawTx": "0x02f9014b83aa36a746405e8302c545948fe6b999dc680ccfdd5bf7eb0974218be2542daa80b8e48e0250ee00000000000000000000000000000000000000000000000000000000000f42400000000000000000000000000000000000000000000000000000000000000006000000000000000000000000ac0bec2aa93c8b06d53d4cff70c77a21d0749be50000000000000000000000001c7d4b196cb0c7b01d743fbc6116a902379c72380000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006400000000000000000000000000000000000000000000000000000000000003e8c080a00c52e17575faf113a5c9b94fdadb6ca07f944473ee9b6ccb7e117425081474a6a04912c226fcd102d095d432a2bbdde80100b8f49762f098754d10c4f702f75ecf",
+      "from": "0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5",
+      "txHash": "0x48de5ffcfcd85000673ccbc195690495dadcd19ad51b42010e7608b650fcec1f",
+      "expected": {
+        "intent": "Bridge via CCTP",
+        "interpolatedIntent": "Burn 1 USDC to mint to 0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5 on Base Sepolia",
+        "owner": "Circle",
+        "fields": [
+          {
+            "label": "Amount",
+            "value": "1 USDC"
+          },
+          {
+            "label": "Destination",
+            "value": "Base Sepolia"
+          },
+          {
+            "label": "Mint recipient",
+            "value": "0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5"
+          },
+          {
+            "label": "Max fee",
+            "value": "0.0001 USDC"
+          },
+          {
+            "label": "Finality",
+            "value": "fast"
+          },
+          {
+            "label": "Caller (0 = anyone)",
+            "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ]
+      }
+    }
+  ]
+}
