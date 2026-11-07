@@ -1,0 +1,17 @@
+{
+  "$schema": "../../specs/erc7730-v2.schema.json",
+  "context": {
+    "contract": {
+      "deployments": [
+        { "chainId": 1, "address": "0xfd78EE919681417d192449715b2594ab58f5D002" },
+        { "chainId": 10, "address": "0xfd78EE919681417d192449715b2594ab58f5D002" },
+        { "chainId": 8453, "address": "0xfd78EE919681417d192449715b2594ab58f5D002" },
+        { "chainId": 42161, "address": "0xfd78EE919681417d192449715b2594ab58f5D002" },
+        { "chainId": 11155111, "address": "0xb43db544E2c27092c107639Ad201b3dEfAbcF192" },
+        { "chainId": 84532, "address": "0xb43db544E2c27092c107639Ad201b3dEfAbcF192" }
+      ]
+    }
+  },
+  "metadata": { "owner": "Circle", "contractName": "Circle CCTP TokenMinterV2", "info": { "url": "https://www.circle.com/" } },
+  "display": { "formats": {} }
+}
