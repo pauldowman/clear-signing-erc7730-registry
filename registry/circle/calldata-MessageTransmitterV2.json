@@ -4,57 +4,23 @@
     "$id": "Circle CCTP V2 - MessageTransmitterV2",
     "contract": {
       "deployments": [
-        {
-          "chainId": 1,
-          "address": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64"
-        },
-        {
-          "chainId": 10,
-          "address": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64"
-        },
-        {
-          "chainId": 8453,
-          "address": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64"
-        },
-        {
-          "chainId": 42161,
-          "address": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64"
-        },
-        {
-          "chainId": 11155111,
-          "address": "0xE737e5cEBEEBa77EFE34D4aa090756590b1CE275"
-        },
-        {
-          "chainId": 84532,
-          "address": "0xE737e5cEBEEBa77EFE34D4aa090756590b1CE275"
-        }
+        { "chainId": 1, "address": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64" },
+        { "chainId": 10, "address": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64" },
+        { "chainId": 8453, "address": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64" },
+        { "chainId": 42161, "address": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64" },
+        { "chainId": 11155111, "address": "0xE737e5cEBEEBa77EFE34D4aa090756590b1CE275" },
+        { "chainId": 84532, "address": "0xE737e5cEBEEBa77EFE34D4aa090756590b1CE275" }
       ]
     }
   },
-  "metadata": {
-    "owner": "Circle",
-    "contractName": "Circle CCTP MessageTransmitterV2",
-    "info": {
-      "url": "https://www.circle.com/"
-    }
-  },
+  "metadata": { "owner": "Circle", "contractName": "Circle CCTP MessageTransmitterV2", "info": { "url": "https://www.circle.com/" } },
   "display": {
     "formats": {
       "receiveMessage(bytes message, bytes attestation)": {
         "intent": "Receive a CCTP message and mint",
         "fields": [
-          {
-            "path": "message",
-            "label": "Message",
-            "format": "raw",
-            "visible": "never"
-          },
-          {
-            "path": "attestation",
-            "label": "Attestation",
-            "format": "raw",
-            "visible": "never"
-          }
+          { "path": "message", "label": "Message", "format": "raw", "visible": "never" },
+          { "path": "attestation", "label": "Attestation", "format": "raw", "visible": "never" }
         ]
       }
     }
