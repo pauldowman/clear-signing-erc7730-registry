@@ -54,7 +54,7 @@
     "definitions": {
       "burnAmount": { "label": "Amount", "format": "tokenAmount", "params": { "tokenPath": "burnToken" } },
       "destination": { "label": "Destination", "format": "enum", "params": { "$ref": "$.metadata.enums.cctpDomain" } },
-      "mintRecipient": { "label": "Mint recipient", "format": "raw" },
+      "mintRecipient": { "label": "Mint recipient", "format": "addressName", "params": { "types": ["eoa"], "sources": ["local", "ens"] } },
       "maxFee": { "label": "Max fee", "format": "tokenAmount", "params": { "tokenPath": "burnToken" } },
       "finality": { "label": "Finality", "format": "enum", "params": { "$ref": "$.metadata.enums.finality" } },
       "destinationCaller": { "label": "Caller (0 = anyone)", "format": "raw" }

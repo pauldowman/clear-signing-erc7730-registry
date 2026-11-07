@@ -15,12 +15,12 @@
       "txHash": "0x48de5ffcfcd85000673ccbc195690495dadcd19ad51b42010e7608b650fcec1f",
       "expected": {
         "intent": "Bridge via CCTP",
-        "interpolatedIntent": "Burn 1 USDC to mint to 0x000000000000000000000000ac0bec2aa93c8b06d53d4cff70c77a21d0749be5 on Base Sepolia",
+        "interpolatedIntent": "Burn 1 USDC to mint to 0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5 on Base Sepolia",
         "owner": "Circle",
         "fields": [
           { "label": "Amount", "value": "1 USDC" },
           { "label": "Destination", "value": "Base Sepolia" },
-          { "label": "Mint recipient", "value": "0x000000000000000000000000ac0bec2aa93c8b06d53d4cff70c77a21d0749be5" },
+          { "label": "Mint recipient", "value": "0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5" },
           { "label": "Max fee", "value": "0.0001 USDC" },
           { "label": "Finality", "value": "fast" },
           { "label": "Caller (0 = anyone)", "value": "0x0000000000000000000000000000000000000000000000000000000000000000" }
@@ -32,12 +32,12 @@
       "rawTx": "0x02f9017083014a3403830f424084773594008303d090948fe6b999dc680ccfdd5bf7eb0974218be2542daa80b90144779b432d00000000000000000000000000000000000000000000000000000000004c4b400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ac0bec2aa93c8b06d53d4cff70c77a21d0749be5000000000000000000000000036cbd53842c5426634e7929541ec2318f3dcf7e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007d000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000002cafe000000000000000000000000000000000000000000000000000000000000c0",
       "expected": {
         "intent": "Bridge via CCTP",
-        "interpolatedIntent": "Burn 5 USDC to mint to 0x000000000000000000000000ac0bec2aa93c8b06d53d4cff70c77a21d0749be5 on Ethereum Sepolia",
+        "interpolatedIntent": "Burn 5 USDC to mint to 0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5 on Ethereum Sepolia",
         "owner": "Circle",
         "fields": [
           { "label": "Amount", "value": "5 USDC" },
           { "label": "Destination", "value": "Ethereum Sepolia" },
-          { "label": "Mint recipient", "value": "0x000000000000000000000000ac0bec2aa93c8b06d53d4cff70c77a21d0749be5" },
+          { "label": "Mint recipient", "value": "0xac0BeC2AA93c8b06d53d4CFf70C77a21D0749bE5" },
           { "label": "Max fee", "value": "0 USDC" },
           { "label": "Finality", "value": "standard" },
           { "label": "Caller (0 = anyone)", "value": "0x0000000000000000000000000000000000000000000000000000000000000000" },
