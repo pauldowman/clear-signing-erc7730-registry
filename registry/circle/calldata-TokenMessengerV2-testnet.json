@@ -1,0 +1,92 @@
+{
+  "$schema": "../../specs/erc7730-v2.schema.json",
+  "context": {
+    "$id": "Circle CCTP V2 - TokenMessengerV2 (Sepolia, Base Sepolia)",
+    "contract": {
+      "deployments": [
+        { "chainId": 11155111, "address": "0x8FE6B999Dc680CcFDD5Bf7EB0974218be2542DAA" },
+        { "chainId": 84532, "address": "0x8FE6B999Dc680CcFDD5Bf7EB0974218be2542DAA" }
+      ]
+    }
+  },
+  "metadata": {
+    "owner": "Circle",
+    "contractName": "Circle CCTP TokenMessengerV2",
+    "info": { "url": "https://www.circle.com/" },
+    "enums": {
+      "cctpDomain": {
+        "0": "Ethereum Sepolia",
+        "1": "Avalanche Fuji",
+        "2": "OP Sepolia",
+        "3": "Arbitrum Sepolia",
+        "5": "Solana Devnet",
+        "6": "Base Sepolia",
+        "7": "Polygon PoS Amoy",
+        "8": "Sui testnet",
+        "9": "Aptos testnet",
+        "10": "Unichain Sepolia",
+        "11": "Linea Sepolia",
+        "12": "Codex testnet",
+        "13": "Sonic testnet",
+        "14": "World Chain Sepolia",
+        "15": "Monad testnet",
+        "16": "Sei testnet",
+        "17": "BNB Smart Chain testnet",
+        "18": "XDC testnet",
+        "19": "HyperEVM testnet",
+        "21": "Ink Sepolia",
+        "22": "Plume testnet",
+        "25": "Starknet testnet",
+        "26": "Arc testnet",
+        "27": "Stellar testnet",
+        "28": "EDGE testnet",
+        "29": "Injective testnet",
+        "30": "Morph testnet",
+        "31": "Pharos testnet",
+        "32": "Cronos testnet",
+        "33": "Plasma testnet",
+        "37": "X Layer testnet"
+      },
+      "finality": { "1000": "fast", "2000": "standard" }
+    }
+  },
+  "display": {
+    "definitions": {
+      "burnAmount": { "label": "Amount", "format": "tokenAmount", "params": { "tokenPath": "burnToken" } },
+      "destination": { "label": "Destination", "format": "enum", "params": { "$ref": "$.metadata.enums.cctpDomain" } },
+      "mintRecipient": { "label": "Mint recipient", "format": "raw" },
+      "maxFee": { "label": "Max fee", "format": "tokenAmount", "params": { "tokenPath": "burnToken" } },
+      "finality": { "label": "Finality", "format": "enum", "params": { "$ref": "$.metadata.enums.finality" } },
+      "destinationCaller": { "label": "Caller (0 = anyone)", "format": "raw" }
+    },
+    "formats": {
+      "depositForBurn(uint256 amount, uint32 destinationDomain, bytes32 mintRecipient, address burnToken, bytes32 destinationCaller, uint256 maxFee, uint32 minFinalityThreshold)": {
+        "intent": "Bridge via CCTP",
+        "interpolatedIntent": "Burn {amount} to mint to {mintRecipient} on {destinationDomain}",
+        "fields": [
+          { "path": "amount", "$ref": "$.display.definitions.burnAmount", "visible": "always" },
+          { "path": "destinationDomain", "$ref": "$.display.definitions.destination", "visible": "always" },
+          { "path": "mintRecipient", "$ref": "$.display.definitions.mintRecipient", "visible": "always" },
+          { "path": "maxFee", "$ref": "$.display.definitions.maxFee", "visible": "always" },
+          { "path": "minFinalityThreshold", "$ref": "$.display.definitions.finality", "visible": "always" },
+          { "path": "destinationCaller", "$ref": "$.display.definitions.destinationCaller", "visible": "always" },
+          { "path": "burnToken", "label": "Burn token", "visible": "never" }
+        ]
+      },
+      "depositForBurnWithHook(uint256 amount, uint32 destinationDomain, bytes32 mintRecipient, address burnToken, bytes32 destinationCaller, uint256 maxFee, uint32 minFinalityThreshold, bytes hookData)": {
+        "intent": "Bridge via CCTP",
+        "interpolatedIntent": "Burn {amount} to mint to {mintRecipient} on {destinationDomain}",
+        "fields": [
+          { "path": "amount", "$ref": "$.display.definitions.burnAmount", "visible": "always" },
+          { "path": "destinationDomain", "$ref": "$.display.definitions.destination", "visible": "always" },
+          { "path": "mintRecipient", "$ref": "$.display.definitions.mintRecipient", "visible": "always" },
+          { "path": "maxFee", "$ref": "$.display.definitions.maxFee", "visible": "always" },
+          { "path": "minFinalityThreshold", "$ref": "$.display.definitions.finality", "visible": "always" },
+          { "path": "destinationCaller", "$ref": "$.display.definitions.destinationCaller", "visible": "always" },
+          { "path": "hookData", "label": "Hook data", "format": "raw", "visible": "always" },
+          { "path": "burnToken", "label": "Burn token", "visible": "never" }
+        ]
+      }
+    }
+  }
+}
