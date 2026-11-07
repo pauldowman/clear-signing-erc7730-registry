@@ -11,7 +11,7 @@
             "path": "_to",
             "label": "To",
             "format": "addressName",
-            "params": { "types": ["eoa"], "sources": ["local", "ens"] },
+            "params": { "types": ["eoa", "wallet"], "sources": ["local", "ens"] },
             "visible": "always"
           }
         ]
